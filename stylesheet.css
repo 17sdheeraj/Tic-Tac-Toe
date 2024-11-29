@@ -1,0 +1,125 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    font-size: 6rem;
+    margin-bottom: 20px;
+}
+
+.theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.game-mode {
+    margin-bottom: 20px;
+}
+
+.game-mode button {
+    background-color: #1f1f1f;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+.game-mode button:hover {
+    background-color: #333333;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #1f1f1f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.cell:hover {
+    background-color: #333333;
+}
+
+.hidden {
+    display: none;
+}
+
+.light-theme {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.light-theme .cell {
+    background-color: #f0f0f0;
+}
+
+.light-theme .cell:hover {
+    background-color: #e0e0e0;
+}
+
+.light-theme .game-mode button {
+    background-color: #e0e0e0;
+    color: #000000;
+}
+
+.light-theme .game-mode button:hover {
+    background-color: #d0d0d0;
+}
+
+.result {
+    font-size: 2rem;
+    margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+    .board {
+        grid-template-columns: repeat(3, 80px);
+        grid-template-rows: repeat(3, 80px);
+    }
+
+    .cell {
+        width: 80px;
+        height: 80px;
+        font-size: 1.5rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .game-mode button {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+}
